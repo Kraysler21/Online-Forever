@@ -1,4 +1,4 @@
-import discord, os, keep_alive, asyncio, datetime, requests
+import discord, os, asyncio, datetime, requests
 
 from discord.ext import tasks, commands
 
@@ -9,7 +9,5 @@ client = commands.Bot(
 
 async def on_ready():
     client.remove_command('help')
-    await client.change_presence(status=discord.Status.online, activity=discord.Game("TESTING"))
-
-keep_alive.keep_alive()
-client.run(os.getenv("TOKEN"), bot=False)
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("VALORANT"))
+client.run("TOKEN"), bot=False)
